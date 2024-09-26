@@ -26,8 +26,22 @@
         data-hx-swap="outerHTML"
         data-hx-get="global.header-nav.partial.html"
       ></nav>
-      <div></div>
-      <div><h1>To do list</h1></div>
+      <div>
+        <div><h1>To do list</h1></div>
+        <div class="search">
+          <input
+            type="text"
+            id="searchInput"
+            class="search__input"
+            placeholder="Search for watches..."
+          />
+          <button class="search__button" onclick="performSearch()">
+            <img src="img/search-without-background.png" alt="search">
+          </button>
+        </div>
+        <!-- Search results container -->
+        <div id="searchResults" class="search__results"></div>
+      </div>
     </header>
 
     <script src="js/script.js"></script>
