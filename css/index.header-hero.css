@@ -1,0 +1,67 @@
+/* Стилі для header */
+header {
+    position: relative;
+    background-color: transparent;
+    text-align: center;
+    height: 200px;
+    margin-bottom: 200px;
+}
+  
+/* Півкруг для header */
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%; /* Ширина 100% */
+    height: 24vw; /* Висота половини від ширини вікна (для адаптивності) */
+    background-color: #007bff; /* Синій колір */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-bottom-left-radius: 100% 150%;
+    border-bottom-right-radius: 100% 150%;
+    z-index: -1; /* Щоб півкруг знаходився позаду */
+}
+
+
+  /* Стилі для заголовка */
+  header h1 {
+    color: white;
+    font-size: 60px;
+    margin-top: 80px;
+    margin-bottom: 60px;
+  }
+  
+  /* Стилі для пошуку */
+  .search {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  .search__input {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 20px;
+    width: 250px;
+  }
+  
+  .search__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-left: -40px;
+    z-index: 1;
+  }
+  
+  .search__button img {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .search__results {
+    margin-top: 20px;
+    color: white;
+  }
+  

@@ -19,15 +19,15 @@
     ></script>
   </head>
   <body>
-    <header>
+    <header class="header">
       <nav
         class="header__nav"
         data-hx-trigger="load"
         data-hx-swap="outerHTML"
         data-hx-get="global.header-nav.partial.html"
       ></nav>
-      <div>
-        <h1>To do list</h1>
+      <div class="header__content">
+        <h1 class="header__title">To Do List</h1>
         <div class="search">
           <input
             type="text"
@@ -36,20 +36,29 @@
             placeholder="Search for watches..."
           />
           <button class="search__button" onclick="performSearch()">
-            <img src="img/search-without-background.png" alt="search" />
+            <img
+              src="img/search-without-background.png"
+              alt="search"
+              class="search__icon"
+            />
           </button>
         </div>
         <!-- Search results container -->
         <div id="searchResults" class="search__results"></div>
       </div>
     </header>
-    <main>
-      <div>
-        <div>
-          <div><img src="img/boy.png" alt="boy logo" /></div>
-          <h6>Personal</h6>
-          <p>3 Tasks</p>
-          <div class="dropdown">
+
+    <main class="main">
+      <div class="main__tasks">
+        <div class="task">
+          <div class="task__logo" id="task-logo-1">
+            <img src="img/boy.png" alt="boy logo" class="task__image" />
+          </div>
+          <div class="task__info">
+            <h6 class="task__title">Personal</h6>
+            <p class="task__count">3 Tasks</p>
+          </div>
+          <div class="task__dropdown">
             <button class="dropdown__button">
               <span class="dropdown__dots"></span>
               <span class="dropdown__dots"></span>
@@ -62,11 +71,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div><img src="img/work.png" alt="work logo" /></div>
-          <h6>Work</h6>
-          <p>3 Tasks</p>
-          <div class="dropdown">
+
+        <div class="task">
+          <div class="task__logo" id="task-logo-2">
+            <img src="img/work.png" alt="work logo" class="task__image" />
+          </div>
+          <div class="task__info">
+            <h6 class="task__title">Work</h6>
+            <p class="task__count">3 Tasks</p>
+          </div>
+          <div class="task__dropdown">
             <button class="dropdown__button">
               <span class="dropdown__dots"></span>
               <span class="dropdown__dots"></span>
@@ -79,11 +93,20 @@
             </div>
           </div>
         </div>
-        <div>
-          <div><img src="img/shopping.png" alt="shopping logo" /></div>
-          <h6>Shopping</h6>
-          <p>3 Tasks</p>
-          <div class="dropdown">
+
+        <div class="task">
+          <div class="task__logo" id="task-logo-3">
+            <img
+              src="img/shopping.png"
+              alt="shopping logo"
+              class="task__image"
+            />
+          </div>
+          <div class="task__info">
+            <h6 class="task__title">Shopping</h6>
+            <p class="task__count">3 Tasks</p>
+          </div>
+          <div class="task__dropdown">
             <button class="dropdown__button">
               <span class="dropdown__dots"></span>
               <span class="dropdown__dots"></span>
@@ -96,11 +119,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div><img src="img/coding.png" alt="coding logo" /></div>
-          <h6>Coding</h6>
-          <p>3 Tasks</p>
-          <div class="dropdown">
+
+        <div class="task">
+          <div class="task__logo" id="task-logo-4">
+            <img src="img/coding.png" alt="coding logo" class="task__image" />
+          </div>
+          <div class="task__info">
+            <h6 class="task__title">Coding</h6>
+            <p class="task__count">3 Tasks</p>
+          </div>
+          <div class="task__dropdown">
             <button class="dropdown__button">
               <span class="dropdown__dots"></span>
               <span class="dropdown__dots"></span>
@@ -113,11 +141,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div><img src="img/heart.png" alt="heart logo" /></div>
-          <h6>Health</h6>
-          <p>3 Tasks</p>
-          <div class="dropdown">
+
+        <div class="task">
+          <div class="task__logo" id="task-logo-5">
+            <img src="img/heart.png" alt="heart logo" class="task__image" />
+          </div>
+          <div class="task__info">
+            <h6 class="task__title">Health</h6>
+            <p class="task__count">3 Tasks</p>
+          </div>
+          <div class="task__dropdown">
             <button class="dropdown__button">
               <span class="dropdown__dots"></span>
               <span class="dropdown__dots"></span>
@@ -130,11 +163,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div><img src="img/fitness.png" alt="fitness logo" /></div>
-          <h6>Fitness</h6>
-          <p>3 Tasks</p>
-          <div class="dropdown">
+
+        <div class="task">
+          <div class="task__logo" id="task-logo-6">
+            <img src="img/fitness.png" alt="fitness logo" class="task__image" />
+          </div>
+          <div class="task__info">
+            <h6 class="task__title">Fitness</h6>
+            <p class="task__count">3 Tasks</p>
+          </div>
+          <div class="task__dropdown">
             <button class="dropdown__button">
               <span class="dropdown__dots"></span>
               <span class="dropdown__dots"></span>
@@ -147,11 +185,16 @@
             </div>
           </div>
         </div>
-        <div>
-          <div><img src="img/finanse.png" alt="finanse logo" /></div>
-          <h6>Finance</h6>
-          <p>3 Tasks</p>
-          <div class="dropdown">
+
+        <div class="task">
+          <div class="task__logo" id="task-logo-7">
+            <img src="img/finanse.png" alt="finance logo" class="task__image" />
+          </div>
+          <div class="task__info">
+            <h6 class="task__title">Finance</h6>
+            <p class="task__count">3 Tasks</p>
+          </div>
+          <div class="task__dropdown">
             <button class="dropdown__button">
               <span class="dropdown__dots"></span>
               <span class="dropdown__dots"></span>
@@ -164,11 +207,20 @@
             </div>
           </div>
         </div>
-        <div>
-          <div><img src="img/education.png" alt="education logo" /></div>
-          <h6>Education</h6>
-          <p>3 Tasks</p>
-          <div class="dropdown">
+
+        <div class="task">
+          <div class="task__logo" id="task-logo-8">
+            <img
+              src="img/education.png"
+              alt="education logo"
+              class="task__image"
+            />
+          </div>
+          <div class="task__info">
+            <h6 class="task__title">Education</h6>
+            <p class="task__count">3 Tasks</p>
+          </div>
+          <div class="task__dropdown">
             <button class="dropdown__button">
               <span class="dropdown__dots"></span>
               <span class="dropdown__dots"></span>
@@ -182,9 +234,7 @@
           </div>
         </div>
       </div>
-      <div>
-        <button>+</button>
-      </div>
+      <div class="task-button"><button>+</button></div>
     </main>
     <script src="js/index.js"></script>
   </body>

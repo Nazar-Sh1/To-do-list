@@ -1,0 +1,231 @@
+.main {
+  padding-bottom: 50px;
+}
+/* Загальні стилі для dropdown */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Стилізація кнопки з трьома крапками */
+.dropdown__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 24px;
+}
+
+.dropdown__dots {
+  display: block;
+  width: 4px;
+  height: 4px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+/* Стилізація меню, яке буде приховане за замовчуванням */
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  top: 30px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+/* Стилізація пунктів меню */
+.dropdown__item {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  color: #000;
+}
+
+.dropdown__item:hover {
+  background-color: #f0f0f0;
+}
+
+/* Відображення меню при натисканні */
+.dropdown--open .dropdown__menu {
+  display: block;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #d9d9d9;
+  border-radius: 20px;
+  padding: 15px;
+  margin-top: 64px;
+  width: 90%;
+  height: 72px;
+  max-width: 280px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative; /* Додаємо для позиціювання дочірніх елементів */
+}
+
+/* Загальні стилі для task__logo */
+.task__logo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  border-radius: 20px 0 0 20px;
+  width: 20%;
+  display: flex;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.task__image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.task__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: calc(
+    20% + 20px
+  ); /* Відступ для вирівнювання з урахуванням task__logo */
+}
+
+.task__title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.task__count {
+  font-size: 14px;
+  color: #666;
+}
+
+.task__dropdown {
+  position: relative;
+}
+
+.dropdown__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.dropdown__dots {
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #333;
+  border-radius: 50%;
+  margin: 3px 0;
+}
+
+.dropdown__menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  display: none;
+}
+
+.dropdown__menu .dropdown__item {
+  display: block;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown__menu .dropdown__item:hover {
+  background-color: #f0f0f0;
+}
+
+.task__dropdown:hover .dropdown__menu {
+  display: block;
+}
+
+#task-logo-1 {
+  background-color: #29b6f6;
+}
+
+#task-logo-2 {
+  background-color: #5e7fa0;
+}
+
+#task-logo-3 {
+  background-color: #fde293;
+}
+
+#task-logo-4 {
+  background-color: #c1d8c5;
+}
+
+#task-logo-5 {
+  background-color: #f44336;
+}
+
+#task-logo-6 {
+  background-color: #d1c2b4;
+}
+
+#task-logo-7 {
+  background-color: #673ab7;
+}
+
+#task-logo-8 {
+  background-color: #f8bbd0;
+}
+
+.main__tasks {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Для кожного непарного елемента (1-й, 3-й, 5-й...) */
+.task:nth-child(odd) {
+  margin-left: 50px;
+}
+
+/* Для кожного парного елемента (2-й, 4-й, 6-й...) */
+.task:nth-child(even) {
+  margin-left: 200px;
+}
+
+.task-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #656565;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.task-button button {
+  font-size: 30px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #d9d9d9;
+}
