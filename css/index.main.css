@@ -229,3 +229,82 @@
   cursor: pointer;
   color: #d9d9d9;
 }
+
+.modal {
+  display: none; /* Сховане за замовчуванням */
+  position: fixed; /* Закріплене */
+  z-index: 1000; /* Високий порядок шарів */
+  left: 0;
+  top: 0; /* Закріплено до верхньої частини */
+  width: 100%; /* Ширина 100% */
+  height: 100%; /* Висота 100% */
+  overflow: auto; /* Прокрутка при потребі */
+  background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
+}
+
+.modal-content {
+  position: relative; /* Відносне позиціювання для півкола */
+  margin: 5% auto; /* Центрування по вертикалі */
+  padding: 50px 20px; /* Відступ згори (50px) і з боків (20px) */
+  padding-top: 200px; /* Більший відступ згори для півкола */
+  width: 1500px; /* Ширина модального вікна */
+  max-width: 90%; /* Максимальна ширина для адаптивності */
+  height: 900px; /* Висота модального вікна */
+  background-color: white; /* Білий фон */
+  border-radius: 8px; /* Закруглені кути */
+  overflow: auto; /* Прокрутка при надлишку контенту */
+  box-sizing: border-box; /* Врахування внутрішніх відступів */
+}
+
+.modal-circle {
+  position: absolute;
+  top: -12vw; /* Закріплено над модальним вікном */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%; /* Повна ширина */
+  height: 27vw; /* Висота половини від ширини для адаптивності */
+  background-color: #007bff; /* Синій колір */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для ефекту */
+  border-bottom-left-radius: 100% 150%; /* Спеціальне закруглення */
+  border-bottom-right-radius: 100% 150%; /* Спеціальне закруглення */
+  z-index: 1; /* Щоб півколо було перед контентом */
+}
+
+.modal-content::before {
+  content: "";
+  position: absolute;
+  top: 0; /* Закріплено до верхньої частини модального вікна */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%; /* Повна ширина */
+  height: 24vw; /* Висота половини від ширини вікна (для адаптивності) */
+  background-color: #007bff; /* Синій колір */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-bottom-left-radius: 100% 150%; /* Спеціальне закруглення */
+  border-bottom-right-radius: 100% 150%; /* Спеціальне закруглення */
+  z-index: -1; /* Щоб півколо було позаду контенту модального вікна */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-image {
+  display: block;
+  margin: 0 auto; /* Центрування зображення */
+  width: 50px; /* Зменшений розмір зображення */
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-top: 20px; /* Відступ зверху */
+}

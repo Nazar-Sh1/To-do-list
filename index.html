@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>To do list</title>
+    <title>To Do List</title>
     <link
       rel="shortcut icon"
       type="image/jpg"
@@ -33,7 +33,7 @@
             type="text"
             id="searchInput"
             class="search__input"
-            placeholder="Search for watches..."
+            placeholder="Search for tasks..."
           />
           <button class="search__button" onclick="performSearch()">
             <img
@@ -50,7 +50,7 @@
 
     <main class="main">
       <div class="main__tasks">
-        <div class="task">
+        <div class="task" onclick="showModal('Personal', 'img/boy.png', 3)">
           <div class="task__logo" id="task-logo-1">
             <img src="img/boy.png" alt="boy logo" class="task__image" />
           </div>
@@ -72,7 +72,7 @@
           </div>
         </div>
 
-        <div class="task">
+        <div class="task" onclick="showModal('Work', 'img/work.png', 3)">
           <div class="task__logo" id="task-logo-2">
             <img src="img/work.png" alt="work logo" class="task__image" />
           </div>
@@ -94,7 +94,7 @@
           </div>
         </div>
 
-        <div class="task">
+        <div class="task" onclick="showModal('Shopping', 'img/shopping.png', 3)">
           <div class="task__logo" id="task-logo-3">
             <img
               src="img/shopping.png"
@@ -120,7 +120,7 @@
           </div>
         </div>
 
-        <div class="task">
+        <div class="task" onclick="showModal('Coding', 'img/coding.png', 3)">
           <div class="task__logo" id="task-logo-4">
             <img src="img/coding.png" alt="coding logo" class="task__image" />
           </div>
@@ -142,7 +142,7 @@
           </div>
         </div>
 
-        <div class="task">
+        <div class="task" onclick="showModal('Health', 'img/heart.png', 3)">
           <div class="task__logo" id="task-logo-5">
             <img src="img/heart.png" alt="heart logo" class="task__image" />
           </div>
@@ -164,7 +164,7 @@
           </div>
         </div>
 
-        <div class="task">
+        <div class="task" onclick="showModal('Fitness', 'img/fitness.png', 3)">
           <div class="task__logo" id="task-logo-6">
             <img src="img/fitness.png" alt="fitness logo" class="task__image" />
           </div>
@@ -186,7 +186,7 @@
           </div>
         </div>
 
-        <div class="task">
+        <div class="task" onclick="showModal('Finance', 'img/finanse.png', 3)">
           <div class="task__logo" id="task-logo-7">
             <img src="img/finanse.png" alt="finance logo" class="task__image" />
           </div>
@@ -208,16 +208,16 @@
           </div>
         </div>
 
-        <div class="task">
+        <div class="task" onclick="showModal('Projects', 'img/education.png', 3)">
           <div class="task__logo" id="task-logo-8">
             <img
               src="img/education.png"
-              alt="education logo"
+              alt="projects logo"
               class="task__image"
             />
           </div>
           <div class="task__info">
-            <h6 class="task__title">Education</h6>
+            <h6 class="task__title">Projects</h6>
             <p class="task__count">3 Tasks</p>
           </div>
           <div class="task__dropdown">
@@ -234,8 +234,28 @@
           </div>
         </div>
       </div>
-      <div class="task-button"><button>+</button></div>
+
+      <div class="task-button">
+        <button onclick="showModal('Add Task', 0)">+</button>
+      </div>
+
+      <!-- Modal window structure -->
+      <div class="modal" id="myModal">
+        <div class="modal-content">
+          <div class="modal-circle"></div>
+          <span class="close">&times;</span>
+          <img
+            class="modal-image"
+            src=""
+            alt="Task Image"
+            style="width: 100px; height: 100px"
+          />
+          <h2>Modal Header</h2>
+          <p>Modal content...</p>
+        </div>
+      </div>
     </main>
+
     <script src="js/index.js"></script>
   </body>
 </html>
