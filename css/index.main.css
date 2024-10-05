@@ -1,18 +1,16 @@
 .main {
   padding-bottom: 50px;
 }
-/* Загальні стилі для dropdown */
 .dropdown {
   position: relative;
   display: inline-block;
 }
 
-/* Стилізація кнопки з трьома крапками */
 .dropdown__button {
   background-color: transparent;
   border: none;
   cursor: pointer;
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
   width: 24px;
@@ -27,7 +25,6 @@
   border-radius: 50%;
 }
 
-/* Стилізація меню, яке буде приховане за замовчуванням */
 .dropdown__menu {
   display: none;
   position: absolute;
@@ -40,7 +37,6 @@
   z-index: 1;
 }
 
-/* Стилізація пунктів меню */
 .dropdown__item {
   display: block;
   padding: 8px 12px;
@@ -52,7 +48,6 @@
   background-color: #f0f0f0;
 }
 
-/* Відображення меню при натисканні */
 .dropdown--open .dropdown__menu {
   display: block;
 }
@@ -71,10 +66,9 @@
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   margin-left: auto;
   margin-right: auto;
-  position: relative; /* Додаємо для позиціювання дочірніх елементів */
+  position: relative; 
 }
 
-/* Загальні стилі для task__logo */
 .task__logo {
   position: absolute;
   left: 0;
@@ -101,7 +95,7 @@
   align-items: center;
   margin-left: calc(
     20% + 20px
-  ); /* Відступ для вирівнювання з урахуванням task__logo */
+  ); 
 }
 
 .task__title {
@@ -199,12 +193,10 @@
   align-items: flex-start;
 }
 
-/* Для кожного непарного елемента (1-й, 3-й, 5-й...) */
 .task:nth-child(odd) {
   margin-left: 50px;
 }
 
-/* Для кожного парного елемента (2-й, 4-й, 6-й...) */
 .task:nth-child(even) {
   margin-left: 200px;
 }
@@ -231,58 +223,58 @@
 }
 
 .modal {
-  display: none; /* Сховане за замовчуванням */
-  position: fixed; /* Закріплене */
-  z-index: 1000; /* Високий порядок шарів */
+  display: none; 
+  position: fixed; 
+  z-index: 1000; 
   left: 0;
-  top: 0; /* Закріплено до верхньої частини */
-  width: 100%; /* Ширина 100% */
-  height: 100%; /* Висота 100% */
-  overflow: auto; /* Прокрутка при потребі */
-  background-color: rgba(0, 0, 0, 0.5); /* Напівпрозорий чорний фон */
+  top: 0; 
+  width: 100%; 
+  height: 100%; 
+  overflow: auto; 
+  background-color: rgba(0, 0, 0, 0.5); 
 }
 
 .modal-content {
-  position: relative; /* Відносне позиціювання для півкола */
-  margin: 5% auto; /* Центрування по вертикалі */
-  padding: 50px 20px; /* Відступ згори (50px) і з боків (20px) */
-  padding-top: 200px; /* Більший відступ згори для півкола */
-  width: 1500px; /* Ширина модального вікна */
-  max-width: 90%; /* Максимальна ширина для адаптивності */
-  height: 900px; /* Висота модального вікна */
-  background-color: white; /* Білий фон */
-  border-radius: 8px; /* Закруглені кути */
-  overflow: auto; /* Прокрутка при надлишку контенту */
-  box-sizing: border-box; /* Врахування внутрішніх відступів */
+  position: relative; 
+  margin: 5% auto; 
+  padding: 50px 20px; 
+  padding-top: 200px; 
+  width: 1500px; 
+  max-width: 90%; 
+  height: 900px; 
+  background-color: white; 
+  border-radius: 8px; 
+  overflow: auto; 
+  box-sizing: border-box; 
 }
 
 .modal-circle {
   position: absolute;
-  top: -12vw; /* Закріплено над модальним вікном */
+  top: -12vw; 
   left: 50%;
   transform: translateX(-50%);
-  width: 120%; /* Повна ширина */
-  height: 27vw; /* Висота половини від ширини для адаптивності */
-  background-color: #007bff; /* Синій колір */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Тінь для ефекту */
-  border-bottom-left-radius: 100% 150%; /* Спеціальне закруглення */
-  border-bottom-right-radius: 100% 150%; /* Спеціальне закруглення */
-  z-index: 1; /* Щоб півколо було перед контентом */
+  width: 120%; 
+  height: 27vw; 
+  background-color: #007bff; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+  border-bottom-left-radius: 100% 150%; 
+  border-bottom-right-radius: 100% 150%; 
+  z-index: 1; 
 }
 
 .modal-content::before {
   content: "";
   position: absolute;
-  top: 0; /* Закріплено до верхньої частини модального вікна */
+  top: 0; 
   left: 50%;
   transform: translateX(-50%);
-  width: 100%; /* Повна ширина */
-  height: 24vw; /* Висота половини від ширини вікна (для адаптивності) */
-  background-color: #007bff; /* Синій колір */
+  width: 100%; 
+  height: 24vw; 
+  background-color: #007bff; 
   box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-  border-bottom-left-radius: 100% 150%; /* Спеціальне закруглення */
-  border-bottom-right-radius: 100% 150%; /* Спеціальне закруглення */
-  z-index: -1; /* Щоб півколо було позаду контенту модального вікна */
+  border-bottom-left-radius: 100% 150%; 
+  border-bottom-right-radius: 100% 150%; 
+  z-index: -1; 
 }
 
 .close {
@@ -301,12 +293,12 @@
 
 .modal-image {
   display: block;
-  margin: 0 auto; /* Центрування зображення */
-  width: 50px; /* Зменшений розмір зображення */
+  margin: 0 auto; 
+  width: 50px; 
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
-  margin-top: 20px; /* Відступ зверху */
+  margin-top: 20px; 
 }
 
 .notes-container {
@@ -355,8 +347,8 @@
 
 .note-buttons {
   display: flex;
-  gap: 5px; /* Відступ між кнопками */
-  margin-left: auto; /* Вирівнюємо кнопки праворуч */
+  gap: 5px; 
+  margin-left: auto; 
 }
 
 .note-checkbox {
@@ -388,7 +380,7 @@
 .note-content-container {
   display: flex;
   align-items: center;
-  gap: 5px; /* Відступ між checkbox та текстом */
+  gap: 5px; 
 }
 .notes-list li {
   display: flex;

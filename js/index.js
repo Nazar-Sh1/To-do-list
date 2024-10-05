@@ -2,6 +2,7 @@ function init() {
     import("./header-nav.js");
     import("./main.js");
     import("./dropdown-toggle.js");
+    import("./character.js");
   }
   
   const totalPartials = document.querySelectorAll(
